@@ -188,3 +188,29 @@ Your transaction signature 4euerUTTdP7XvXC4m9HyN46kR5jSCABo1oB4ppPKesSi7BWPeULCF
 
 - ✔ Asset 2 unpacked (270ms)
 
+## Arch Diagram
+  
+![%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202024-12-05%20%D0%B2%2001 08 26](https://github.com/user-attachments/assets/3dff097c-efe0-4d92-b6be-548307dc1801)
+
+Explanation
+
+User (Creator):
+
+- Deposits both fungible and non-fungible tokens into the vault (escrow concept).
+
+- Initializes the giftConfig account, storing metadata about mints and amounts.
+
+- Mints an NFT gift and saves it in the collection.
+
+NFT Creation:
+
+- The gift NFT is minted and sent to the intended recipient.
+
+User (Receiver):
+
+- Interacts with the NFT using the "Unpacking" instruction.
+
+- The program validates the NFT and transfers all assets from the vault to the recipient.
+
+
+
