@@ -26,8 +26,8 @@ The program is deployed on Solana Devnet with the following address:
 capstone/
 ├── src/
 │   ├── instructions/
-│   │   ├── create_gift.rs   # Logic for creating a new gift
-│   │   ├── unpack.rs    # Logic for unpacking/redeeming a gift
+│   │   ├── create_gift.rs  
+│   │   ├── unpack.rs    
 │   │   ├── add_token.rs
 │   │   ├── burn.rs
 │   │   ├── create_collection.rs
@@ -37,19 +37,11 @@ capstone/
 │   │   ├── mod.rs
 │   │   ├── gift_config.rs
 │   ├── errors.rs
-│   ├── lib.rs              # Program entry point and context definitions
-├── Cargo.toml              # Rust dependencies and configuration
-├── Anchor.toml             # Anchor-specific configurations
-└── README.md               # Project documentation (this file)
+│   ├── lib.rs             
+├── Cargo.toml             
+├── Anchor.toml             
+└── README.md              
 ```
-
-## Installation and Setup
-
-### Prerequisites
-
-- [Rust](https://www.rust-lang.org/tools/install)
-- [Solana CLI](https://docs.solana.com/cli/install-solana-cli-tools)
-- [Anchor Framework](https://book.anchor-lang.com/chapter_2/installation.html)
 
 ## Installation and Setup
 
