@@ -16,23 +16,25 @@ pub struct InitializeConfig <'info> {
 
 
     #[account(
-        init,
+        init_if_needed,
         payer = admin,
         seeds = [b"rewards".as_ref(), config_account.key().as_ref()],
         bump,
         mint::decimals = 6,
         mint::authority = config_account,
     )]
-    pub rewards_mint: InterfaceAccount<'info, Mint>,
+    pub rewards_mint: Account<'info, Mint>, // kein Interface account, sondern einfach Account !!! weil kein token2022
 
     #[account(mut)]
     pub admin: Signer<'info>,
+
     pub system_program: Program<'info, System>,
     pub token_program: Program<'info, Token>,
 }
 
+
 impl <'info> InitializeConfig <'info> {
-    pub fn initialize_config(&mut self, points_per_stake: u8, max_stake: u8, freeze_period: u32, bumps: &InitializeBumps) -> Result<()> {
+    pub fn initialize_config(&mut self, points_per_stake: u8, max_stake: u8, freeze_period: u32, bumps: &InitializeConfigBumps) -> Result<()> {
         self.config_account.set_inner(StakeConfig{
             points_per_stake,
             rewards_bump: bumps.rewards_mint,

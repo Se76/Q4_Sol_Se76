@@ -1,5 +1,18 @@
 use anchor_lang::prelude::*;
-use anchor_spl::{metadata::{Metadata, MetadataAccount, MetadataProgram, MasterEditionAccount  },token::{Mint, TokenAccount, Token, Approve, approve}};
+use anchor_spl::{
+    metadata::{
+        MasterEditionAccount, 
+        Metadata, 
+        MetadataAccount
+    }, 
+    token::{
+        approve, 
+        Approve, 
+        Mint, 
+        Token, 
+        TokenAccount
+    }
+};
 use mpl_token_metadata::instructions::{FreezeDelegatedAccountCpi, FreezeDelegatedAccountCpiAccounts};
 
 use crate::state::{stake_account::StakeAccount, stake_config::StakeConfig, user_account::UserAccount};
@@ -54,7 +67,7 @@ pub struct Stake<'info> {
     )]
     pub user_account: Account<'info, UserAccount>,
     pub token_program: Program<'info, Token>,
-    pub metadata_program: Program<'info, MetadataProgram>,
+    pub metadata_program: Program<'info, Metadata>,
     pub system_program: Program<'info, System>,
 }
 
