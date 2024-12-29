@@ -4,7 +4,6 @@ use anchor_spl::{associated_token::AssociatedToken, token::{close_account, trans
 use crate::{GiftConfig, GiftErrors}; // Gift erros were used in previous version
 
 #[derive(Accounts)]
-// #[instruction(index: u8)]
 pub struct Unpack<'info> {
     #[account(
         mut,
