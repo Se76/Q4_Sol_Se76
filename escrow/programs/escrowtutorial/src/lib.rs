@@ -13,8 +13,6 @@ declare_id!("2NXYwU37VaoP5tKWfu9sCDTEvSfBiGj82jL64jjiYrKq");
 
 #[program]
 pub mod escrowtutorial {
-    use crate::make::Make;
-
     use super::*;
 
     pub fn make(ctx: Context<Make>, seed: u64, deposit: u64, recieve: u64) -> Result<()> {

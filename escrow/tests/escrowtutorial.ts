@@ -8,12 +8,6 @@ describe("escrowtutorial", () => {
 
   const program = anchor.workspace.Escrowtutorial as Program<Escrowtutorial>;
 
-  
-  it("Is initialized!", async () => {
-    // Add your test here.
-    const tx = await program.methods.initialize().rpc();
-    console.log("Your transaction signature", tx);
-  });
   it("The vault was created!", async () => {
     // Add your test here.
     const tx = await program.methods.make().rpc();
